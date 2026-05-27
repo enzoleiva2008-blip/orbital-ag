@@ -154,11 +154,11 @@ orbital-ag/
 
 | Nome | RM | Turma | GitHub | LinkedIn |
 |---|---|---|---|---|
-| Ana Clara Santos | RM 561234 | 1TDSA – 2026/1 | [anaclarasantos](https://github.com/anaclarasantos) | [LinkedIn](https://linkedin.com/in/anaclarasantos) |
-| Bruno Oliveira Lima | RM 561235 | 1TDSA – 2026/1 | [brunooliveira](https://github.com/brunooliveira) | [LinkedIn](https://linkedin.com/in/brunooliveira) |
-| Carla Mendes Rocha | RM 561236 | 1TDSA – 2026/1 | [carlamendes](https://github.com/carlamendes) | [LinkedIn](https://linkedin.com/in/carlamendes) |
-| Diego Ferreira Alves | RM 561237 | 1TDSA – 2026/1 | [diegoferreira](https://github.com/diegoferreira) | [LinkedIn](https://linkedin.com/in/diegoferreira) |
-| Eduarda Costa Pires | RM 561238 | 1TDSA – 2026/1 | [eduardacosta](https://github.com/eduardacosta) | [LinkedIn](https://linkedin.com/in/eduardacosta) |
+| Enzo Leiva Varrichio | RM 568877 | 1TDSPO – 2026/1 | [enzoleiva2008-blip](https://github.com/enzoleiva2008-blip) | [LinkedIn](https://linkedin.com/in/enzoleiva) |
+| Pietro Ibra | RM 573262 | 1TDSPO – 2026/1 | [PietroIbra](https://github.com/PietroIbra) | [LinkedIn](https://linkedin.com/in/pietroibra) |
+| Kauã Augusto Fiuza | RM 572369 | 1TDSPO – 2026/1 | [KauaznX](https://github.com/KauaznX) | [LinkedIn](https://linkedin.com/in/kauafiuza) |
+| Bernardo Andrade | RM 571170 | 1TDSPO – 2026/1 | [bernardopqr-cpu](https://github.com/bernardopqr-cpu) | [LinkedIn](https://linkedin.com/in/bernardoandrade) |
+| Matheus Segura Anacleto de Souza | RM 570878 | 1TDSPO – 2026/1 | [MatheuSegura](https://github.com/MatheuSegura) | [LinkedIn](https://linkedin.com/in/matheussegura) |
 
 ---
 

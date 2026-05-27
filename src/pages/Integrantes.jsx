@@ -1,51 +1,50 @@
 import '../styles/pages.css';
 
-/* Dados do grupo — altere com os dados reais da equipe */
 const team = [
   {
-    nome: 'Ana Clara Santos',
-    rm: 'RM 561234',
-    turma: '1TDSA – 2026/1',
+    nome: 'Enzo Leiva Varrichio',
+    rm: 'RM 568877',
+    turma: '1TDSPO – 2026/1',
     foto: null,
-    github: 'https://github.com/anaclarasantos',
-    linkedin: 'https://linkedin.com/in/anaclarasantos',
-    emoji: '👩‍💻'
-  },
-  {
-    nome: 'Bruno Oliveira Lima',
-    rm: 'RM 561235',
-    turma: '1TDSA – 2026/1',
-    foto: null,
-    github: 'https://github.com/brunooliveira',
-    linkedin: 'https://linkedin.com/in/brunooliveira',
-    emoji: '👨‍🚀'
-  },
-  {
-    nome: 'Carla Mendes Rocha',
-    rm: 'RM 561236',
-    turma: '1TDSA – 2026/1',
-    foto: null,
-    github: 'https://github.com/carlamendes',
-    linkedin: 'https://linkedin.com/in/carlamendes',
-    emoji: '👩‍🔬'
-  },
-  {
-    nome: 'Diego Ferreira Alves',
-    rm: 'RM 561237',
-    turma: '1TDSA – 2026/1',
-    foto: null,
-    github: 'https://github.com/diegoferreira',
-    linkedin: 'https://linkedin.com/in/diegoferreira',
+    github: 'https://github.com/enzoleiva2008-blip',
+    linkedin: 'https://linkedin.com/in/enzoleiva',
     emoji: '👨‍💻'
   },
   {
-    nome: 'Eduarda Costa Pires',
-    rm: 'RM 561238',
-    turma: '1TDSA – 2026/1',
+    nome: 'Pietro Ibra',
+    rm: 'RM 573262',
+    turma: '1TDSPO – 2026/1',
     foto: null,
-    github: 'https://github.com/eduardacosta',
-    linkedin: 'https://linkedin.com/in/eduardacosta',
-    emoji: '👩‍🎨'
+    github: 'https://github.com/PietroIbra',
+    linkedin: 'https://linkedin.com/in/pietroibra',
+    emoji: '👨‍🚀'
+  },
+  {
+    nome: 'Kauã Augusto Fiuza',
+    rm: 'RM 572369',
+    turma: '1TDSPO – 2026/1',
+    foto: null,
+    github: 'https://github.com/KauaznX',
+    linkedin: 'https://linkedin.com/in/kauafiuza',
+    emoji: '👨‍🔬'
+  },
+  {
+    nome: 'Bernardo Andrade',
+    rm: 'RM 571170',
+    turma: '1TDSPO – 2026/1',
+    foto: null,
+    github: 'https://github.com/bernardopqr-cpu',
+    linkedin: 'https://linkedin.com/in/bernardoandrade',
+    emoji: '👨‍🎨'
+  },
+  {
+    nome: 'Matheus Segura Anacleto de Souza',
+    rm: 'RM 570878',
+    turma: '1TDSPO – 2026/1',
+    foto: null,
+    github: 'https://github.com/MatheuSegura',
+    linkedin: 'https://linkedin.com/in/matheussegura',
+    emoji: '🧑‍💻'
   }
 ];
 
@@ -99,7 +98,7 @@ export default function Integrantes() {
           <h1>Conheça os integrantes</h1>
           <p>
             Estudantes de Análise e Desenvolvimento de Sistemas da FIAP,
-            turma 1TDSA — idealizadores e desenvolvedores do OrbitalAg.
+            turma 1TDSPO — idealizadores e desenvolvedores do OrbitalAg.
           </p>
         </div>
       </section>
@@ -108,7 +107,7 @@ export default function Integrantes() {
         <div className="container">
           <div className="section-header">
             <div className="section-tag">FIAP – Global Solution 2026/1</div>
-            <h2>Turma 1TDSA – Fevereiro</h2>
+            <h2>Turma 1TDSPO – Fevereiro</h2>
             <p>
               Grupo formado por {team.length} integrantes apaixonados por tecnologia,
               inovação e o impacto que a ciência pode ter no mundo real.

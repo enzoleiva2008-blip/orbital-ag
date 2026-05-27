@@ -141,7 +141,7 @@ export default function Integrantes() {
             </p>
             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
               <a
-                href="https://github.com/orbital-ag"
+                href="https://github.com/enzoleiva2008-blip/orbital-ag"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-outline"

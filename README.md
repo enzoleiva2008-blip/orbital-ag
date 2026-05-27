@@ -164,15 +164,15 @@ orbital-ag/
 
 ## 🔗 Repositório
 
-**GitHub:** [https://github.com/orbital-ag/orbital-ag](https://github.com/orbital-ag/orbital-ag)
+**GitHub:** [https://github.com/enzoleiva2008-blip/orbital-ag](https://github.com/enzoleiva2008-blip/orbital-ag)
 
 ---
 
 ## 📞 Contato
 
 - **E-mail:** orbital.ag@fiap.com.br
-- **GitHub:** [github.com/orbital-ag](https://github.com/orbital-ag)
-- **LinkedIn:** [linkedin.com/company/orbital-ag](https://linkedin.com/company/orbital-ag)
+- **GitHub:** [github.com/enzoleiva2008-blip/orbital-ag](https://github.com/enzoleiva2008-blip/orbital-ag)
+- **LinkedIn:** [linkedin.com/in/enzoleiva2008-blip](https://linkedin.com/in/enzoleiva2008-blip)
 - **Instituição:** FIAP — Análise e Desenvolvimento de Sistemas, Turma 1TDSA
 
 ---

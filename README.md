@@ -154,11 +154,10 @@ orbital-ag/
 
 | Nome | RM | Turma | GitHub | LinkedIn |
 |---|---|---|---|---|
-| Enzo Leiva Varrichio | RM 568877 | 1TDSPO – 2026/1 | [enzoleiva2008-blip](https://github.com/enzoleiva2008-blip) | [LinkedIn](https://linkedin.com/in/enzoleiva) |
-| Pietro Ibra | RM 573262 | 1TDSPO – 2026/1 | [PietroIbra](https://github.com/PietroIbra) | [LinkedIn](https://linkedin.com/in/pietroibra) |
-| Kauã Augusto Fiuza | RM 572369 | 1TDSPO – 2026/1 | [KauaznX](https://github.com/KauaznX) | [LinkedIn](https://linkedin.com/in/kauafiuza) |
-| Bernardo Andrade | RM 571170 | 1TDSPO – 2026/1 | [bernardopqr-cpu](https://github.com/bernardopqr-cpu) | [LinkedIn](https://linkedin.com/in/bernardoandrade) |
-| Matheus Segura Anacleto de Souza | RM 570878 | 1TDSPO – 2026/1 | [MatheuSegura](https://github.com/MatheuSegura) | [LinkedIn](https://linkedin.com/in/matheussegura) |
+| Enzo Leiva Varrichio | RM 568877 | 1TDSPX – 2026/1 | [enzoleiva2008-blip](https://github.com/enzoleiva2008-blip) | [LinkedIn](https://linkedin.com/in/enzoleiva) |
+| Pietro Ibra | RM 573262 | 1TDSPX – 2026/1 | [PietroIbra](https://github.com/PietroIbra) | [LinkedIn](https://linkedin.com/in/pietroibra) |
+| Kauã Augusto Fiuza | RM 572369 | 1TDSPX – 2026/1 | [KauaznX](https://github.com/KauaznX) | [LinkedIn](https://linkedin.com/in/kauafiuza) |
+| Matheus Segura Anacleto de Souza | RM 570878 | 1TDSPX – 2026/1 | [MatheuSegura](https://github.com/MatheuSegura) | [LinkedIn](https://linkedin.com/in/matheussegura) |
 
 ---
 

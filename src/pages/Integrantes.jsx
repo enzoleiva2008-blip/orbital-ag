@@ -4,7 +4,7 @@ const team = [
   {
     nome: 'Enzo Leiva Varrichio',
     rm: 'RM 568877',
-    turma: '1TDSPO – 2026/1',
+    turma: '1TDSPX – 2026/1',
     foto: null,
     github: 'https://github.com/enzoleiva2008-blip',
     linkedin: 'https://linkedin.com/in/enzoleiva',
@@ -13,7 +13,7 @@ const team = [
   {
     nome: 'Pietro Ibra',
     rm: 'RM 573262',
-    turma: '1TDSPO – 2026/1',
+    turma: '1TDSPX – 2026/1',
     foto: null,
     github: 'https://github.com/PietroIbra',
     linkedin: 'https://linkedin.com/in/pietroibra',
@@ -22,25 +22,16 @@ const team = [
   {
     nome: 'Kauã Augusto Fiuza',
     rm: 'RM 572369',
-    turma: '1TDSPO – 2026/1',
+    turma: '1TDSPX – 2026/1',
     foto: null,
     github: 'https://github.com/KauaznX',
     linkedin: 'https://linkedin.com/in/kauafiuza',
     emoji: '👨‍🔬'
   },
   {
-    nome: 'Bernardo Andrade',
-    rm: 'RM 571170',
-    turma: '1TDSPO – 2026/1',
-    foto: null,
-    github: 'https://github.com/bernardopqr-cpu',
-    linkedin: 'https://linkedin.com/in/bernardoandrade',
-    emoji: '👨‍🎨'
-  },
-  {
     nome: 'Matheus Segura Anacleto de Souza',
     rm: 'RM 570878',
-    turma: '1TDSPO – 2026/1',
+    turma: '1TDSPX – 2026/1',
     foto: null,
     github: 'https://github.com/MatheuSegura',
     linkedin: 'https://linkedin.com/in/matheussegura',

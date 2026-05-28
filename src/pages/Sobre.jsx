@@ -3,74 +3,74 @@ import '../styles/pages.css';
 export default function Sobre() {
   return (
     <>
-      {/* Hero */}
       <section className="page-hero" aria-label="Sobre o projeto">
         <div className="container">
-          <div className="section-tag">Sobre o OrbitalAg</div>
+          <div className="section-tag">Sobre o SkyShield</div>
           <h1>Conheça o projeto</h1>
           <p>
-            Uma solução que nasce da convergência entre a nova economia espacial
-            e os desafios reais do agronegócio e do meio ambiente no Brasil.
+            Uma plataforma que usa a economia espacial para salvar vidas —
+            prevendo desastres climáticos com dias de antecedência e alertando
+            quem precisa, quando precisa.
           </p>
         </div>
       </section>
 
-      {/* Conteúdo principal */}
       <section className="section" aria-label="Detalhes do projeto">
         <div className="container">
           <div className="sobre-content">
 
-            {/* Coluna de texto */}
             <div className="sobre-text">
-              <h2>Por que o OrbitalAg existe?</h2>
+              <h2>Por que o SkyShield existe?</h2>
               <p>
-                O Brasil é um dos maiores produtores agrícolas do mundo, mas agricultores
-                e gestores ainda tomam decisões críticas com informações limitadas ou
-                atrasadas. Ao mesmo tempo, satélites orbitam a Terra coletando terabytes
-                de dados que, na maioria das vezes, ficam inacessíveis para quem mais
-                precisaria deles.
+                Todos os anos, enchentes, secas e chuvas extremas devastam comunidades rurais
+                e agrícolas no Brasil. O país perde bilhões em safras destruídas, infraestrutura
+                danificada e, o mais grave, vidas humanas — muitas vezes por falta de aviso prévio.
               </p>
               <p>
-                O <strong>OrbitalAg</strong> surgiu para fechar essa lacuna: democratizar
-                o acesso aos dados orbitais e transformá-los em inteligência prática,
-                visual e acessível para o campo brasileiro.
+                Ao mesmo tempo, satélites meteorológicos orbitam a Terra coletando dados climáticos
+                em tempo real que, na maioria das vezes, não chegam às pessoas que mais precisariam deles.
+                O <strong>SkyShield</strong> foi criado para mudar isso.
               </p>
               <p>
-                Nossa plataforma integra imagens dos satélites <strong>Sentinel-2</strong>,
-                <strong> Landsat 9</strong> e <strong>MODIS</strong> para monitorar
-                lavouras, detectar queimadas e desmatamento, prever eventos climáticos
-                extremos e otimizar o uso de recursos hídricos.
+                Nossa plataforma integra dados de satélites como <strong>GOES-16</strong>,
+                <strong> Sentinel-3</strong> e <strong>NOAA-20</strong>, processa essas informações
+                com Inteligência Artificial e envia alertas automáticos pelo <strong>Telegram</strong>
+                com 5 a 7 dias de antecedência — tempo suficiente para evacuar, colher,
+                proteger e preparar planos de emergência.
               </p>
 
-              <h2 style={{ marginTop: '2.5rem' }}>O problema que resolvemos</h2>
+              <h2 style={{ marginTop: '2.5rem' }}>O exemplo real</h2>
               <p>
-                Agricultores perdem bilhões de reais anualmente por causas que são
-                detectáveis com antecedência via satélite: secas, pragas, queimadas e
-                alagamentos. A defesa civil reage tarde a desastres que poderiam ser
-                previstos dias antes. E o desmatamento avança enquanto a fiscalização
-                é insuficiente.
+                João é agricultor em Minas Gerais. Ele recebe uma mensagem no Telegram:
+                <em> "🛡️ Alerta SkyShield: Chuva extrema prevista para sua região em 5 dias.
+                Risco de enchente moderado. Recomendamos colheita antecipada e esvaziamento
+                de áreas de baixo nível."</em>
+              </p>
+              <p>
+                Com 5 dias de antecedência, João colhe a plantação, protege seus bens e
+                avisa os vizinhos. <strong>Resultado: salva sua safra e sua renda.</strong>
               </p>
 
               <div className="sobre-highlights" aria-label="Diferenciais do projeto">
                 <div className="highlight-item">
                   <div className="icon">🛰️</div>
                   <div>
-                    <strong>Dados em tempo real</strong>
-                    <p>Imagens atualizadas a cada 12h via Sentinel-2 e MODIS</p>
+                    <strong>Dados satelitais em tempo real</strong>
+                    <p>Satélites GOES-16, Sentinel-3 e NOAA-20 monitorando o Brasil 24h</p>
                   </div>
                 </div>
                 <div className="highlight-item">
                   <div className="icon">🤖</div>
                   <div>
-                    <strong>IA aplicada ao agro</strong>
-                    <p>Modelos preditivos de clima, pragas e produtividade</p>
+                    <strong>Inteligência Artificial preditiva</strong>
+                    <p>Modelos treinados para identificar padrões de desastres climáticos</p>
                   </div>
                 </div>
                 <div className="highlight-item">
                   <div className="icon">📱</div>
                   <div>
-                    <strong>Acessível em qualquer dispositivo</strong>
-                    <p>Interface responsiva para desktop, tablet e smartphone</p>
+                    <strong>Alertas automáticos via Telegram</strong>
+                    <p>Funciona com qualquer celular, mesmo em regiões com sinal fraco</p>
                   </div>
                 </div>
                 <div className="highlight-item">
@@ -83,7 +83,6 @@ export default function Sobre() {
               </div>
             </div>
 
-            {/* Sidebar */}
             <div>
               <div className="tech-stack" aria-label="Tecnologias e fontes de dados">
                 <h3>🔧 Tecnologias utilizadas</h3>
@@ -112,15 +111,22 @@ export default function Sobre() {
                   <div className="tech-item">
                     <span className="tech-icon">🛰️</span>
                     <div>
-                      <span className="tech-name">Sentinel-2 (ESA)</span>
-                      <span className="tech-desc">Imagens multiespectrais de alta res.</span>
+                      <span className="tech-name">GOES-16 / NOAA-20</span>
+                      <span className="tech-desc">Satélites meteorológicos em órbita</span>
                     </div>
                   </div>
                   <div className="tech-item">
-                    <span className="tech-icon">🌎</span>
+                    <span className="tech-icon">✈️</span>
                     <div>
-                      <span className="tech-name">Landsat 9 (NASA)</span>
-                      <span className="tech-desc">Séries históricas de cobertura terrestre</span>
+                      <span className="tech-name">Telegram Bot API</span>
+                      <span className="tech-desc">Envio automático de alertas climáticos</span>
+                    </div>
+                  </div>
+                  <div className="tech-item">
+                    <span className="tech-icon">🤖</span>
+                    <div>
+                      <span className="tech-name">IA Preditiva</span>
+                      <span className="tech-desc">Modelos de previsão de desastres climáticos</span>
                     </div>
                   </div>
                 </div>
@@ -128,7 +134,7 @@ export default function Sobre() {
                 <div style={{ marginTop: '2rem' }}>
                   <h3>🎯 ODS da ONU</h3>
                   <p style={{ fontSize: '0.85rem', marginBottom: '0.75rem' }}>
-                    O OrbitalAg contribui diretamente com:
+                    O SkyShield contribui diretamente com:
                   </p>
                   <div className="ods-list">
                     <div className="ods-item">

@@ -89,7 +89,7 @@ export default function Integrantes() {
           <h1>Conheça os integrantes</h1>
           <p>
             Estudantes de Análise e Desenvolvimento de Sistemas da FIAP,
-            turma 1TDSPO — idealizadores e desenvolvedores do OrbitalAg.
+            turma 1TDSPX — idealizadores e desenvolvedores do SkyShield.
           </p>
         </div>
       </section>
@@ -98,7 +98,7 @@ export default function Integrantes() {
         <div className="container">
           <div className="section-header">
             <div className="section-tag">FIAP – Global Solution 2026/1</div>
-            <h2>Turma 1TDSPO – Fevereiro</h2>
+            <h2>Turma 1TDSPX – Fevereiro</h2>
             <p>
               Grupo formado por {team.length} integrantes apaixonados por tecnologia,
               inovação e o impacto que a ciência pode ter no mundo real.
@@ -126,8 +126,9 @@ export default function Integrantes() {
             <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>🛰️</div>
             <h3 style={{ marginBottom: '0.75rem' }}>OrbitalAg</h3>
             <p style={{ marginBottom: '1.5rem' }}>
-              Projeto desenvolvido para a disciplina de Front-End Design Engineering
-              na FIAP, Global Solution 2026/1 — tema: <em>O Espaço é a Nova Fronteira</em>.
+              SkyShield — Sistema de Previsão de Desastres Climáticos. Desenvolvido para
+              a disciplina de Front-End Design Engineering na FIAP, Global Solution 2026/1
+              — tema: <em>O Espaço é a Nova Fronteira</em>.
             </p>
             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
               <a

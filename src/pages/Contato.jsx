@@ -13,7 +13,6 @@ export default function Contato() {
   function handleChange(e) {
     const { name, value } = e.target;
     setFields((prev) => ({ ...prev, [name]: value }));
-    /* Limpa erro do campo ao digitar */
     if (errors[name]) {
       setErrors((prev) => ({ ...prev, [name]: '' }));
     }
@@ -25,14 +24,12 @@ export default function Contato() {
 
     if (!isValid) {
       setErrors(formErrors);
-      /* Foca o primeiro campo com erro */
       const firstKey = Object.keys(formErrors)[0];
       document.getElementById(firstKey)?.focus();
       return;
     }
 
     setLoading(true);
-    /* Simula envio (sem backend) */
     setTimeout(() => {
       setLoading(false);
       setSubmitted(true);
@@ -48,8 +45,8 @@ export default function Contato() {
           <div className="section-tag">Entre em contato</div>
           <h1>Fale com a equipe</h1>
           <p>
-            Tem dúvidas, sugestões ou quer saber mais sobre o OrbitalAg?
-            Envie uma mensagem — responderemos em breve.
+            Tem dúvidas sobre o SkyShield, quer sugerir melhorias ou
+            integrar a plataforma à sua cidade ou cooperativa? Fale com a gente.
           </p>
         </div>
       </section>
@@ -58,11 +55,10 @@ export default function Contato() {
         <div className="container">
           <div className="contato-grid">
 
-            {/* Info */}
             <div className="contato-info">
               <h2>Canais de atendimento</h2>
               <p>
-                O OrbitalAg foi desenvolvido por estudantes da FIAP no contexto
+                O SkyShield foi desenvolvido por estudantes da FIAP no contexto
                 da Global Solution 2026/1. Entre em contato pelo canal mais conveniente.
               </p>
               <div className="contact-channels">
@@ -70,34 +66,33 @@ export default function Contato() {
                   <div className="channel-icon" aria-hidden="true">📧</div>
                   <div className="channel-text">
                     <strong>E-mail</strong>
-                    <span>orbital.ag@fiap.com.br</span>
+                    <span>skyshield@fiap.com.br</span>
+                  </div>
+                </div>
+                <div className="channel-item">
+                  <div className="channel-icon" aria-hidden="true">✈️</div>
+                  <div className="channel-text">
+                    <strong>Telegram</strong>
+                    <span>@SkyShieldBot</span>
                   </div>
                 </div>
                 <div className="channel-item">
                   <div className="channel-icon" aria-hidden="true">🐙</div>
                   <div className="channel-text">
                     <strong>GitHub</strong>
-                    <span>github.com/orbital-ag</span>
-                  </div>
-                </div>
-                <div className="channel-item">
-                  <div className="channel-icon" aria-hidden="true">💼</div>
-                  <div className="channel-text">
-                    <strong>LinkedIn</strong>
-                    <span>linkedin.com/company/orbital-ag</span>
+                    <span>github.com/enzoleiva2008-blip/orbital-ag</span>
                   </div>
                 </div>
                 <div className="channel-item">
                   <div className="channel-icon" aria-hidden="true">🏫</div>
                   <div className="channel-text">
                     <strong>FIAP</strong>
-                    <span>Análise e Desenvolvimento de Sistemas — 1TDS</span>
+                    <span>Análise e Desenvolvimento de Sistemas — 1TDSPX</span>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Formulário */}
             <div className="contact-form">
               <h3>Envie uma mensagem</h3>
 

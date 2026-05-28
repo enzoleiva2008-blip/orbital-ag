@@ -12,18 +12,18 @@ export default function Home() {
         <div className="container">
           <div className="hero-content">
             <div className="hero-tag" aria-label="Categoria">
-              🌱 Agro &amp; Economia Espacial
+              🛡️ Previsão de Desastres Climáticos
             </div>
 
             <h1 className="hero-title">
-              Satélites a serviço do
-              <span className="highlight-blue">campo brasileiro</span>
+              Salve vidas antes que o
+              <span className="highlight-blue">desastre aconteça</span>
             </h1>
 
             <p className="hero-desc">
-              O <strong>OrbitalAg</strong> transforma dados de satélites como Sentinel e Landsat
-              em inteligência prática para agricultores, cooperativas e órgãos de defesa civil —
-              monitorando lavouras, prevendo desastres e otimizando recursos em tempo real.
+              O <strong>SkyShield</strong> usa satélites meteorológicos e Inteligência Artificial
+              para prever chuvas extremas, secas e enchentes com <strong>5 a 7 dias de antecedência</strong>
+              — enviando alertas automáticos via Telegram para agricultores, comunidades e defesa civil.
             </p>
 
             <div className="hero-actions">
@@ -37,16 +37,16 @@ export default function Home() {
 
             <div className="hero-stats" aria-label="Estatísticas">
               <div className="stat-item">
-                <strong>98%</strong>
-                <span>Cobertura nacional</span>
+                <strong>5–7</strong>
+                <span>dias de antecedência</span>
               </div>
               <div className="stat-item">
-                <strong>12h</strong>
-                <span>Atualização de dados</span>
+                <strong>24h</strong>
+                <span>atualização de dados</span>
               </div>
               <div className="stat-item">
-                <strong>5+</strong>
-                <span>Satélites integrados</span>
+                <strong>100%</strong>
+                <span>cobertura nacional</span>
               </div>
             </div>
           </div>
@@ -58,20 +58,20 @@ export default function Home() {
               <div className="orbit-ring orbit-ring-1"></div>
               <div className="orbit-ring orbit-ring-2"></div>
               <div className="satellite">🛰️</div>
-              <div className="satellite satellite-2">🌿</div>
+              <div className="satellite satellite-2">⛈️</div>
 
               <div className="orbit-data-card">
-                <div className="card-label">NDVI Index</div>
-                <div className="card-value">0.74</div>
+                <div className="card-label">Alerta emitido</div>
+                <div className="card-value" style={{ color: 'var(--color-accent)', fontSize: '0.95rem' }}>
+                  Chuva extrema +72h
+                </div>
               </div>
               <div className="orbit-data-card">
                 <div className="card-label">
                   <span className="card-dot"></span>
-                  Alerta ativo
+                  Telegram enviado
                 </div>
-                <div className="card-value" style={{ color: 'var(--color-accent)', fontSize: '0.95rem' }}>
-                  Seca moderada
-                </div>
+                <div className="card-value">1.284 alertas</div>
               </div>
             </div>
           </div>
@@ -83,62 +83,62 @@ export default function Home() {
         <div className="container">
           <div className="section-header">
             <div className="section-tag">Funcionalidades</div>
-            <h2>Tudo que o campo precisa, <br />vindo do espaço</h2>
-            <p>Tecnologia orbital aplicada a problemas reais do agronegócio brasileiro</p>
+            <h2>Tudo que você precisa para <br />se proteger com antecedência</h2>
+            <p>Tecnologia orbital e inteligência artificial aplicadas à prevenção de desastres climáticos</p>
           </div>
 
           <div className="features-grid">
             <article className="feature-card">
-              <div className="feature-icon">🌾</div>
-              <h3>Monitoramento de Lavouras</h3>
+              <div className="feature-icon">⛈️</div>
+              <h3>Previsão de Chuvas Extremas</h3>
               <p>
-                Análise do índice de vegetação (NDVI) de qualquer talhão com imagens
-                atualizadas a cada 12 horas por satélites Sentinel-2.
+                Satélites meteorológicos monitoram padrões de pressão, umidade e temperatura
+                para prever eventos de chuva intensa com até 7 dias de antecedência.
               </p>
             </article>
 
             <article className="feature-card">
-              <div className="feature-icon green">⛈️</div>
-              <h3>Previsão Climática</h3>
+              <div className="feature-icon green">🌊</div>
+              <h3>Alerta de Enchentes</h3>
               <p>
-                Alertas antecipados de secas, geadas e chuvas intensas com base em
-                dados termais e de umidade coletados por satélite.
+                Modelos de IA combinam dados de chuva acumulada e relevo para identificar
+                áreas com alto risco de inundação antes que ela ocorra.
               </p>
             </article>
 
             <article className="feature-card">
-              <div className="feature-icon">💧</div>
-              <h3>Gestão de Recursos Hídricos</h3>
+              <div className="feature-icon">🔥</div>
+              <h3>Detecção de Secas</h3>
               <p>
-                Mapeamento de reservatórios, rios e aquíferos para otimização do
-                uso de água na irrigação e prevenção de escassez.
+                Índices de umidade do solo e precipitação abaixo do normal são detectados
+                semanas antes, permitindo preparo e gestão hídrica preventiva.
               </p>
             </article>
 
             <article className="feature-card">
-              <div className="feature-icon green">🔥</div>
-              <h3>Detecção de Queimadas</h3>
+              <div className="feature-icon green">📱</div>
+              <h3>Alertas via Telegram</h3>
               <p>
-                Identificação em tempo real de focos de calor e desmatamento através
-                de sensores infravermelhos do satélite MODIS / Landsat.
+                Chatbot envia alertas automáticos personalizados por região diretamente
+                no Telegram — sem necessidade de app adicional ou internet de alta velocidade.
               </p>
             </article>
 
             <article className="feature-card">
-              <div className="feature-icon">📊</div>
-              <h3>Dashboard de Análise</h3>
+              <div className="feature-icon">🗺️</div>
+              <h3>Mapa Interativo</h3>
               <p>
-                Painel interativo com gráficos, mapas e relatórios personalizados
-                para tomada de decisão embasada em dados reais.
+                Dashboard com mapa de calor mostrando previsões e riscos por região,
+                acessível a agricultores, prefeituras e órgãos de defesa civil.
               </p>
             </article>
 
             <article className="feature-card">
               <div className="feature-icon green">🚨</div>
-              <h3>Alertas de Desastre</h3>
+              <h3>Integração com Defesa Civil</h3>
               <p>
-                Sistema de notificação para defesa civil, integrado ao Space Charter
-                da ESA para resposta rápida a emergências ambientais.
+                Protocolo de comunicação direta com prefeituras e Defesa Civil para
+                ativação de planos de emergência com antecedência suficiente.
               </p>
             </article>
           </div>
@@ -150,30 +150,30 @@ export default function Home() {
         <div className="container">
           <div className="section-header">
             <div className="section-tag">Processo</div>
-            <h2>Como o OrbitalAg funciona?</h2>
-            <p>Da órbita ao campo em 4 etapas</p>
+            <h2>Como o SkyShield funciona?</h2>
+            <p>Do satélite ao alerta no seu celular em 4 etapas</p>
           </div>
 
           <div className="steps-container">
             <div className="step-card">
               <div className="step-number" aria-label="Etapa 1">1</div>
-              <h4>Captura Orbital</h4>
-              <p>Satélites coletam imagens multiespectrais da superfície a cada passagem</p>
+              <h4>Coleta Orbital</h4>
+              <p>Satélites meteorológicos coletam dados de temperatura, umidade e pressão atmosférica</p>
             </div>
             <div className="step-card">
               <div className="step-number" aria-label="Etapa 2">2</div>
-              <h4>Processamento</h4>
-              <p>Algoritmos processam as bandas espectrais e calculam índices agronômicos</p>
+              <h4>Armazenamento</h4>
+              <p>Banco de dados armazena histórico climático e dados em tempo real de toda a região</p>
             </div>
             <div className="step-card">
               <div className="step-number" aria-label="Etapa 3">3</div>
               <h4>Análise com IA</h4>
-              <p>Modelos de inteligência artificial interpretam padrões e geram alertas preditivos</p>
+              <p>Modelos de Inteligência Artificial analisam padrões e preveem desastres com 5–7 dias de antecedência</p>
             </div>
             <div className="step-card">
               <div className="step-number" aria-label="Etapa 4">4</div>
-              <h4>Decisão no Campo</h4>
-              <p>Agricultores e gestores recebem insights claros e acionáveis no dashboard</p>
+              <h4>Alerta no Telegram</h4>
+              <p>Chatbot envia alertas automáticos para usuários cadastrados e órgãos de emergência</p>
             </div>
           </div>
         </div>
@@ -193,46 +193,46 @@ export default function Home() {
                 </div>
               </div>
               <div className="impact-badge">
-                <strong>+38%</strong>
-                <span>produtividade média</span>
+                <strong>5–7</strong>
+                <span>dias de antecedência</span>
               </div>
             </div>
 
             <div className="impact-content">
               <div className="section-tag">Impacto Real</div>
-              <h2>Tecnologia espacial resolvendo problemas terrestres</h2>
+              <h2>Quem o SkyShield protege?</h2>
               <p>
-                O OrbitalAg conecta a nova economia espacial com os maiores desafios
-                do agronegócio brasileiro, contribuindo diretamente com os Objetivos de
-                Desenvolvimento Sustentável da ONU.
+                Comunidades rurais e agricultores sofrem constantemente com desastres climáticos
+                sem aviso prévio. Com o SkyShield, eles têm tempo suficiente para agir antes
+                que o pior aconteça.
               </p>
 
               <ul className="impact-list">
                 <li className="impact-item">
-                  <div className="impact-icon">🌱</div>
+                  <div className="impact-icon">🌾</div>
                   <div className="impact-item-text">
-                    <h4>Segurança Alimentar</h4>
-                    <p>Redução de perdas por pragas e clima com alertas antecipados de até 72h</p>
+                    <h4>Agricultores</h4>
+                    <p>Protegem plantações, colhem antes da chuva e evitam perdas milionárias de safra</p>
                   </div>
                 </li>
                 <li className="impact-item">
-                  <div className="impact-icon">💧</div>
+                  <div className="impact-icon">🏘️</div>
                   <div className="impact-item-text">
-                    <h4>Uso Inteligente da Água</h4>
-                    <p>Economia de até 40% no consumo hídrico com irrigação orientada por dados</p>
+                    <h4>Comunidades Rurais</h4>
+                    <p>Têm tempo para evacuar com segurança e proteger seus bens antes de enchentes</p>
                   </div>
                 </li>
                 <li className="impact-item">
-                  <div className="impact-icon">🌍</div>
+                  <div className="impact-icon">🚨</div>
                   <div className="impact-item-text">
-                    <h4>Menos CO₂</h4>
-                    <p>Monitoramento de desmatamento e emissões de carbono em tempo real</p>
+                    <h4>Prefeituras e Defesa Civil</h4>
+                    <p>Ativam planos de emergência com antecedência, reduzindo vítimas e danos materiais</p>
                   </div>
                 </li>
               </ul>
 
               <Link to="/solucao" className="btn btn-green">
-                Explore a solução completa →
+                Ver caso real de uso →
               </Link>
             </div>
           </div>
@@ -244,10 +244,10 @@ export default function Home() {
         <div className="container">
           <div className="cta-box">
             <div className="section-tag">Global Solution 2026/1 — FIAP</div>
-            <h2>O espaço é a nova fronteira. <br />O campo é nossa missão.</h2>
+            <h2>O espaço como escudo. <br />A tecnologia a serviço da vida.</h2>
             <p>
               Desenvolvido por alunos da FIAP para conectar a economia espacial
-              com soluções práticas para a agricultura e o meio ambiente.
+              com a prevenção de desastres climáticos no Brasil.
             </p>
             <div className="cta-actions">
               <Link to="/plataforma" className="btn btn-primary">🚀 Acessar a plataforma</Link>

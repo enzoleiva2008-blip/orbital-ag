@@ -3,19 +3,36 @@ import '../styles/pages.css';
 
 const faqs = [
   {
-    category: 'Sobre a Solução',
+    category: 'Sobre o SkyShield',
     items: [
       {
-        q: 'O que é o OrbitalAg?',
-        a: 'O OrbitalAg é uma plataforma digital que utiliza dados de satélites (Sentinel-2, Landsat 9 e MODIS) para monitorar lavouras, prever eventos climáticos extremos, detectar queimadas e fornecer inteligência agrícola em tempo real para agricultores, cooperativas e órgãos de defesa civil.'
+        q: 'O que é o SkyShield?',
+        a: 'O SkyShield é uma plataforma de previsão de desastres climáticos que usa dados de satélites meteorológicos (GOES-16, Sentinel-3, NOAA-20) e Inteligência Artificial para antecipar eventos como chuvas extremas, secas e enchentes com 5 a 7 dias de antecedência, enviando alertas automáticos via Telegram para agricultores, comunidades rurais e órgãos de defesa civil.'
       },
       {
-        q: 'Qual problema o OrbitalAg resolve?',
-        a: 'Agricultores e gestores tomam decisões críticas com informações limitadas ou atrasadas. O OrbitalAg democratiza o acesso a dados orbitais e os transforma em informação prática e visual, ajudando a reduzir perdas por clima, otimizar o uso de água e prevenir desastres ambientais.'
+        q: 'Qual problema o SkyShield resolve?',
+        a: 'Comunidades rurais e agricultores frequentemente sofrem com desastres climáticos sem aviso prévio suficiente para se proteger. O SkyShield resolve isso democratizando o acesso a dados satelitais meteorológicos e transformando esses dados em alertas práticos, entregues diretamente no Telegram — mesmo com sinal de internet fraco.'
       },
       {
-        q: 'Como o projeto se conecta com a economia espacial?',
-        a: 'A nova economia espacial inclui satélites comerciais de observação da Terra que geram terabytes de dados diariamente. O OrbitalAg monetiza esses dados ao transformá-los em serviços de alto valor para o agronegócio, seguindo o modelo de "dados como serviço" (DaaS) da indústria espacial.'
+        q: 'Como o SkyShield se conecta com a economia espacial?',
+        a: 'A nova economia espacial inclui satélites meteorológicos comerciais e governamentais que geram dados climáticos em tempo real 24h por dia. O SkyShield monetiza esses dados transformando-os em um serviço de alertas de alto valor para populações vulneráveis e órgãos públicos, seguindo o modelo de "dados como serviço" da indústria espacial.'
+      }
+    ]
+  },
+  {
+    category: 'Alertas e Previsões',
+    items: [
+      {
+        q: 'Com quanto tempo de antecedência os alertas são enviados?',
+        a: 'O SkyShield emite alertas com 5 a 7 dias de antecedência para eventos climáticos de grande impacto. Esse período foi calculado para dar tempo suficiente para que agricultores façam colheitas antecipadas, famílias se preparem para evacuar, e prefeituras ativem planos de emergência com eficiência.'
+      },
+      {
+        q: 'Quais tipos de desastres o SkyShield prevê?',
+        a: 'A plataforma prevê: chuvas extremas (acima de 50mm/h), enchentes e inundações, secas prolongadas, vendavais e tempestades severas, e deslizamentos de terra (em áreas de risco mapeadas). Os alertas são classificados por nível de risco: Atenção (amarelo), Alerta (laranja) e Emergência (vermelho).'
+      },
+      {
+        q: 'Como funciona o alerta via Telegram?',
+        a: 'O usuário se cadastra no chatbot do SkyShield no Telegram e informa sua cidade ou CEP. O bot envia automaticamente notificações quando um risco climático é detectado para a região cadastrada. A mensagem inclui o tipo de evento, nível de risco, prazo previsto e orientações de segurança. Funciona com qualquer celular e sinal 2G/3G.'
       }
     ]
   },
@@ -23,33 +40,16 @@ const faqs = [
     category: 'Dados e Satélites',
     items: [
       {
-        q: 'De onde vêm os dados usados pelo OrbitalAg?',
-        a: 'Os dados são provenientes de missões abertas da NASA (Landsat 9, MODIS) e da ESA (Sentinel-2), cujo acesso é gratuito e público. O OrbitalAg coleta, processa e apresenta esses dados de forma acessível, sem necessidade de expertise técnica por parte do usuário.'
+        q: 'De onde vêm os dados meteorológicos?',
+        a: 'Os dados são provenientes de satélites como GOES-16 (NOAA/NASA), Sentinel-3 (ESA) e NOAA-20, cujo acesso é gratuito e público. O SkyShield coleta, processa e analisa esses dados com modelos de IA para gerar previsões precisas, sem custo adicional de licenciamento de dados.'
       },
       {
         q: 'Com que frequência os dados são atualizados?',
-        a: 'O Sentinel-2 revisita a mesma área a cada 5 dias, fornecendo imagens em resolução de 10 metros. O MODIS atualiza dados de temperatura e vegetação diariamente. O OrbitalAg consolida e exibe novos dados a cada 12 horas para a maioria das regiões monitoradas.'
+        a: 'O GOES-16 atualiza imagens a cada 10 minutos para a América do Sul. O SkyShield consolida e reavalia os modelos preditivos a cada 6 horas, garantindo que os alertas reflitam sempre as condições atmosféricas mais recentes.'
       },
       {
-        q: 'O que é o índice NDVI e por que é importante?',
-        a: 'NDVI (Normalized Difference Vegetation Index) é um índice calculado a partir de bandas espectrais do satélite que indica a saúde e densidade da vegetação. Valores próximos de 1.0 indicam vegetação densa e saudável; valores próximos de 0 ou negativos indicam solo exposto ou vegetação estressada, o que permite detectar secas e pragas com antecedência.'
-      }
-    ]
-  },
-  {
-    category: 'Uso da Plataforma',
-    items: [
-      {
-        q: 'A plataforma é gratuita?',
-        a: 'O OrbitalAg oferece um plano gratuito com acesso a dados básicos de NDVI e alertas climáticos regionais. Planos premium incluem análises preditivas com IA, relatórios personalizados por talhão e integração com sistemas ERP agrícolas.'
-      },
-      {
-        q: 'Preciso de conhecimento técnico para usar?',
-        a: 'Não. A plataforma foi projetada para ser intuitiva. Os dados complexos de satélite são apresentados em dashboards visuais, com gráficos, mapas interativos e alertas em linguagem simples. Se um índice NDVI baixar abaixo do limiar, você recebe uma notificação clara: "Atenção: possível estresse hídrico na área X".'
-      },
-      {
-        q: 'Funciona em regiões sem internet de qualidade?',
-        a: 'Sim! O OrbitalAg foi projetado para funcionar em conectividade limitada. O aplicativo cache os dados mais recentes localmente e pode operar com conexões 2G/3G, priorizando alertas e informações críticas quando a largura de banda é limitada — essencial para regiões rurais remotas.'
+        q: 'A previsão é precisa?',
+        a: 'Os modelos de IA do SkyShield são treinados com dados históricos dos últimos 20 anos de eventos climáticos no Brasil. Para eventos de chuva extrema, a acurácia é de aproximadamente 85% com 5 dias de antecedência e 92% com 48 horas. Os alertas são emitidos de forma conservadora: preferimos avisar e não ocorrer do que deixar de avisar e o desastre acontecer.'
       }
     ]
   },
@@ -58,11 +58,11 @@ const faqs = [
     items: [
       {
         q: 'Este é um projeto real ou acadêmico?',
-        a: 'O OrbitalAg foi desenvolvido como projeto acadêmico para a Global Solution 2026/1 da FIAP, com o tema "O Espaço é a Nova Fronteira". Porém, a solução foi concebida com viabilidade real em mente, utilizando fontes de dados abertos existentes e tecnologias de mercado.'
+        a: 'O SkyShield foi desenvolvido como projeto acadêmico para a Global Solution 2026/1 da FIAP, com o tema "O Espaço é a Nova Fronteira". Porém, toda a arquitetura foi concebida com viabilidade real em mente — utilizando fontes de dados satelitais abertas existentes, tecnologias de mercado e o Telegram como canal de distribuição acessível.'
       },
       {
         q: 'Quais tecnologias foram usadas no desenvolvimento do site?',
-        a: 'O site foi desenvolvido com React + Vite, CSS puro com variáveis customizadas (sem frameworks como Bootstrap), React Router para navegação entre páginas, e JavaScript para interatividade. Todo o código foi versionado no GitHub com commits frequentes de cada integrante.'
+        a: 'O site foi desenvolvido com React + Vite, CSS puro com variáveis customizadas (sem frameworks como Bootstrap ou jQuery), React Router para navegação SPA, e JavaScript para interatividade (menu hambúrguer, FAQ acordeon, validação de formulário, tabs). Todo o código está versionado no GitHub com commits frequentes.'
       }
     ]
   }
@@ -96,8 +96,8 @@ export default function FAQ() {
           <div className="section-tag">Perguntas Frequentes</div>
           <h1>Tem alguma dúvida?</h1>
           <p>
-            Encontre as respostas sobre o OrbitalAg, a tecnologia espacial
-            por trás da plataforma e como utilizá-la.
+            Encontre as respostas sobre o SkyShield, como funciona a previsão
+            climática por satélite e como receber alertas no seu Telegram.
           </p>
         </div>
       </section>

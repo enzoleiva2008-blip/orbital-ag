@@ -1,56 +1,55 @@
 import { useState } from 'react';
 import '../styles/pages.css';
 
-/* Dados simulados para o dashboard */
 const kpis = [
-  { label: 'Áreas Monitoradas', value: '1.284', change: '+12 hoje' },
-  { label: 'Alertas Ativos',    value: '7',     change: '3 críticos' },
-  { label: 'NDVI Médio',        value: '0.68',  change: '+0.04 vs ontem' }
+  { label: 'Regiões Monitoradas', value: '5.284', change: '+18 hoje' },
+  { label: 'Alertas Ativos',      value: '12',    change: '4 críticos' },
+  { label: 'Usuários no Telegram', value: '8.741', change: '+203 hoje'  }
 ];
 
 const menuItems = [
   { icon: '🗺️', label: 'Mapa Geral',    active: true  },
-  { icon: '🌾', label: 'Lavouras',       active: false },
-  { icon: '💧', label: 'Hídrico',        active: false },
-  { icon: '🔥', label: 'Queimadas',      active: false },
-  { icon: '⛈️', label: 'Clima',          active: false },
+  { icon: '⛈️', label: 'Chuva Extrema', active: false },
+  { icon: '🌊', label: 'Enchentes',      active: false },
+  { icon: '🔥', label: 'Secas',          active: false },
+  { icon: '📱', label: 'Telegram',       active: false },
   { icon: '📊', label: 'Relatórios',     active: false },
   { icon: '🔔', label: 'Alertas',        active: false },
 ];
 
 const barData = [
   { label: 'Jan', height: 55, type: 'normal' },
-  { label: 'Fev', height: 70, type: 'normal' },
-  { label: 'Mar', height: 45, type: 'normal' },
-  { label: 'Abr', height: 80, type: 'green'  },
-  { label: 'Mai', height: 65, type: 'normal' },
-  { label: 'Jun', height: 40, type: 'normal' },
-  { label: 'Jul', height: 90, type: 'green'  },
+  { label: 'Fev', height: 80, type: 'green'  },
+  { label: 'Mar', height: 40, type: 'normal' },
+  { label: 'Abr', height: 70, type: 'normal' },
+  { label: 'Mai', height: 90, type: 'green'  },
+  { label: 'Jun', height: 35, type: 'normal' },
+  { label: 'Jul', height: 60, type: 'normal' },
 ];
 
 const alerts = [
   {
-    icon: '⚠️',
-    title: 'Estresse hídrico detectado',
-    desc: 'NDVI abaixo de 0.40 em 3 talhões — Região de Ribeirão Preto',
-    time: 'Há 2 horas'
+    icon: '🔴',
+    title: 'Chuva extrema iminente',
+    desc: 'Sistema de baixa pressão — Risco crítico para Vale do Paraíba (SP/RJ) em 5 dias',
+    time: 'Há 1 hora'
   },
   {
-    icon: '🔥',
-    title: 'Foco de calor próximo',
-    desc: 'Foco ativo a 15 km da área monitorada — Mato Grosso do Sul',
-    time: 'Há 5 horas'
+    icon: '🟠',
+    title: 'Risco de enchente moderado',
+    desc: 'Bacia do Rio Doce com acúmulo acima do normal — Alerta para 12 municípios',
+    time: 'Há 3 horas'
   },
   {
-    icon: '⛈️',
-    title: 'Alerta de chuva intensa',
-    desc: 'Previsão de 80 mm em 24h — Risco de alagamento em talhões planos',
-    time: 'Há 8 horas'
+    icon: '🟡',
+    title: 'Seca em desenvolvimento',
+    desc: 'Déficit hídrico acumulado no Nordeste — Recomendação de irrigação preventiva',
+    time: 'Há 6 horas'
   },
   {
     icon: '✅',
-    title: 'NDVI normalizado',
-    desc: 'Área Fazenda São Bento voltou ao nível verde após irrigação',
+    title: 'Alerta encerrado',
+    desc: 'Tempestade prevista para o Sul do Paraná dissipou antes de atingir as cidades',
     time: 'Há 1 dia'
   }
 ];
@@ -58,39 +57,77 @@ const alerts = [
 const features = [
   {
     icon: '🗺️',
-    title: 'Mapa Interativo',
-    desc: 'Visualize suas áreas em camadas: NDVI, temperatura, umidade e queimadas sobrepostas no mapa.'
+    title: 'Mapa de Risco',
+    desc: 'Mapa de calor com previsão de desastres por região, atualizado a cada 6 horas com dados satelitais.'
+  },
+  {
+    icon: '📱',
+    title: 'Chatbot Telegram',
+    desc: 'Alertas automáticos direto no celular. Funciona com sinal 2G e não precisa de app adicional.'
   },
   {
     icon: '📈',
-    title: 'Gráficos Históricos',
-    desc: 'Compare a evolução do NDVI e do clima nos últimos 12 meses por talhão.'
+    title: 'Histórico Climático',
+    desc: 'Gráficos com evolução de eventos climáticos nos últimos meses para análise e aprendizado.'
   },
   {
-    icon: '🔔',
-    title: 'Notificações Push',
-    desc: 'Receba alertas instantâneos no celular quando um limiar crítico for atingido em suas áreas.'
-  },
-  {
-    icon: '📋',
-    title: 'Relatórios PDF',
-    desc: 'Exporte relatórios completos com imagens de satélite, gráficos e recomendações por e-mail.'
+    icon: '🚨',
+    title: 'Protocolo de Emergência',
+    desc: 'Integração com Defesa Civil para ativação automática de planos de emergência municipais.'
   }
 ];
 
+const tabs = [
+  { id: 'chuva',    label: '⛈️ Chuva Extrema' },
+  { id: 'enchente', label: '🌊 Enchentes'      },
+  { id: 'seca',     label: '🔥 Secas'          },
+  { id: 'telegram', label: '📱 Telegram'       },
+];
+
+const tabContent = {
+  chuva: {
+    title: '⛈️ Previsão de Chuva Extrema',
+    text: [
+      'O módulo de chuva analisa dados de pressão atmosférica, umidade relativa e temperatura oceânica dos satélites GOES-16 e NOAA-20 para identificar formação de sistemas de baixa pressão intensa.',
+      'Eventos com precipitação acima de 50mm/h são classificados como críticos. O SkyShield emite alertas com até 7 dias de antecedência, muito antes dos sistemas convencionais.'
+    ]
+  },
+  enchente: {
+    title: '🌊 Mapeamento de Enchentes',
+    text: [
+      'O módulo de enchentes cruza dados de chuva acumulada com modelos digitais de elevação (DEM) do território brasileiro para calcular o risco de transbordamento em bacias hidrográficas.',
+      'Municípios em planícies de inundação recebem alertas personalizados com nível de risco e tempo estimado até o pico da enchente, permitindo evacuação planejada.'
+    ]
+  },
+  seca: {
+    title: '🔥 Monitoramento de Secas',
+    text: [
+      'O índice de déficit hídrico é calculado com base na diferença entre precipitação esperada e observada ao longo de 30, 60 e 90 dias, usando dados históricos e em tempo real do Sentinel-3 e INMET.',
+      'Regiões com déficit acima de 40% recebem alertas de seca em desenvolvimento, orientando agricultores sobre irrigação e gestão de reservatórios antes do agravamento.'
+    ]
+  },
+  telegram: {
+    title: '📱 Alertas via Telegram',
+    text: [
+      'O chatbot do SkyShield no Telegram permite que qualquer pessoa se cadastre informando sua cidade ou CEP. A partir daí, recebe automaticamente alertas quando um risco climático é detectado para sua região.',
+      'As mensagens incluem: tipo de evento, nível de risco (🟡 Atenção / 🟠 Alerta / 🔴 Emergência), prazo previsto e orientações de segurança. Funciona com qualquer celular e conexão 2G.'
+    ]
+  }
+};
+
 export default function Plataforma() {
   const [activeMenu, setActiveMenu] = useState(0);
-  const [activeTab, setActiveTab] = useState('ndvi');
+  const [activeTab, setActiveTab] = useState('chuva');
 
   return (
     <>
       <section className="page-hero" aria-label="Plataforma">
         <div className="container">
-          <div className="section-tag">Plataforma OrbitalAg</div>
-          <h1>Dashboard de Monitoramento</h1>
+          <div className="section-tag">Plataforma SkyShield</div>
+          <h1>Dashboard de Previsão Climática</h1>
           <p>
-            Visualize como o OrbitalAg apresenta os dados de satélite em um painel
-            intuitivo, com KPIs, gráficos e alertas em tempo real.
+            Visualize como o SkyShield apresenta alertas de desastres em um painel
+            intuitivo com mapa de risco, KPIs e notificações em tempo real.
           </p>
         </div>
       </section>
@@ -100,27 +137,24 @@ export default function Plataforma() {
         <div className="container">
           <div className="section-header">
             <div className="section-tag">Demonstração</div>
-            <h2>O painel de controle do campo</h2>
+            <h2>O painel de controle climático</h2>
             <p>Interface interativa que simula a experiência real da plataforma</p>
           </div>
 
           <div className="dashboard-preview" role="region" aria-label="Dashboard simulado">
-            {/* Topbar */}
             <div className="dash-topbar">
               <div className="dash-dots" aria-hidden="true">
                 <div className="dash-dot dash-dot-red"></div>
                 <div className="dash-dot dash-dot-yellow"></div>
                 <div className="dash-dot dash-dot-green"></div>
               </div>
-              <div className="dash-title">OrbitalAg — Dashboard v1.0</div>
+              <div className="dash-title">SkyShield — Dashboard v1.0</div>
               <div style={{ fontSize: '0.75rem', color: 'var(--color-accent)' }}>
-                🟢 Dados ao vivo
+                🟢 Monitoramento ativo
               </div>
             </div>
 
-            {/* Body */}
             <div className="dash-body">
-              {/* Sidebar */}
               <div className="dash-sidebar" aria-label="Menu lateral">
                 <div className="dash-sidebar-title">Navegação</div>
                 {menuItems.map((item, i) => (
@@ -137,9 +171,7 @@ export default function Plataforma() {
                 ))}
               </div>
 
-              {/* Main */}
               <div className="dash-main">
-                {/* KPIs */}
                 <div className="dash-kpi-row" role="list" aria-label="Indicadores principais">
                   {kpis.map((kpi) => (
                     <div className="dash-kpi" key={kpi.label} role="listitem">
@@ -150,16 +182,15 @@ export default function Plataforma() {
                   ))}
                 </div>
 
-                {/* Gráfico de barras */}
-                <div className="dash-chart" aria-label="Gráfico de NDVI mensal">
-                  <div className="dash-chart-title">📊 Evolução do NDVI — 2026</div>
-                  <div className="chart-bars" role="img" aria-label="Gráfico de barras com evolução mensal">
+                <div className="dash-chart" aria-label="Gráfico de eventos climáticos 2026">
+                  <div className="dash-chart-title">📊 Eventos climáticos detectados — 2026</div>
+                  <div className="chart-bars" role="img" aria-label="Gráfico de barras com eventos por mês">
                     {barData.map((bar) => (
                       <div className="chart-bar-wrap" key={bar.label}>
                         <div
                           className={`chart-bar${bar.type === 'green' ? ' green' : ''}`}
                           style={{ height: `${bar.height}%` }}
-                          title={`${bar.label}: NDVI ${(bar.height / 100).toFixed(2)}`}
+                          title={`${bar.label}: ${bar.height} eventos`}
                         ></div>
                         <div className="chart-label">{bar.label}</div>
                       </div>
@@ -182,7 +213,7 @@ export default function Plataforma() {
           <div className="section-header">
             <div className="section-tag">Sistema de Alertas</div>
             <h2>Notificações em tempo real</h2>
-            <p>Alertas gerados automaticamente com base nos dados de satélite</p>
+            <p>Alertas gerados automaticamente pelos modelos de IA com base nos dados satelitais</p>
           </div>
 
           <div className="alerts-grid" role="list" aria-label="Lista de alertas recentes">
@@ -200,23 +231,16 @@ export default function Plataforma() {
         </div>
       </section>
 
-      {/* ===== Camadas do mapa / Tabs ===== */}
-      <section className="section" aria-label="Camadas de dados do mapa">
+      {/* ===== Tabs de módulos ===== */}
+      <section className="section" aria-label="Módulos da plataforma">
         <div className="container">
           <div className="section-header">
-            <div className="section-tag">Camadas de Dados</div>
-            <h2>Visualize por índice</h2>
-            <p>O mapa do OrbitalAg exibe diferentes camadas espectrais para análise</p>
+            <div className="section-tag">Módulos de Previsão</div>
+            <h2>Explore cada tipo de alerta</h2>
           </div>
 
-          {/* Tabs de navegação */}
-          <div style={{ display: 'flex', gap: '0.75rem', marginBottom: '2rem', flexWrap: 'wrap', justifyContent: 'center' }} role="tablist" aria-label="Camadas do mapa">
-            {[
-              { id: 'ndvi',  label: '🌾 NDVI' },
-              { id: 'lst',   label: '🌡️ Temperatura' },
-              { id: 'agua',  label: '💧 Recursos Hídricos' },
-              { id: 'fogo',  label: '🔥 Queimadas' }
-            ].map((tab) => (
+          <div style={{ display: 'flex', gap: '0.75rem', marginBottom: '2rem', flexWrap: 'wrap', justifyContent: 'center' }} role="tablist" aria-label="Módulos do SkyShield">
+            {tabs.map((tab) => (
               <button
                 key={tab.id}
                 role="tab"
@@ -232,7 +256,6 @@ export default function Plataforma() {
             ))}
           </div>
 
-          {/* Panel de descrição */}
           <div
             id={`tab-panel-${activeTab}`}
             role="tabpanel"
@@ -240,68 +263,15 @@ export default function Plataforma() {
             className="card"
             style={{ maxWidth: '700px', margin: '0 auto' }}
           >
-            {activeTab === 'ndvi' && (
-              <>
-                <h3 style={{ marginBottom: '1rem' }}>🌾 Índice de Vegetação (NDVI)</h3>
-                <p>
-                  O NDVI varia de <strong>-1 a +1</strong>. Valores acima de 0.6 indicam
-                  vegetação densa e saudável. Entre 0.2 e 0.5 indicam vegetação esparsa
-                  ou estressada. Abaixo de 0.2, solo exposto ou vegetação seca.
-                </p>
-                <p style={{ marginTop: '0.75rem' }}>
-                  <strong style={{ color: 'var(--color-accent)' }}>🟢 &gt; 0.6</strong> — Saudável &nbsp;
-                  <strong style={{ color: '#f39c12' }}>🟡 0.3–0.6</strong> — Alerta &nbsp;
-                  <strong style={{ color: 'var(--color-danger)' }}>🔴 &lt; 0.3</strong> — Crítico
-                </p>
-              </>
-            )}
-            {activeTab === 'lst' && (
-              <>
-                <h3 style={{ marginBottom: '1rem' }}>🌡️ Temperatura de Superfície (LST)</h3>
-                <p>
-                  O sensor termal do Landsat 9 mede a temperatura da superfície terrestre
-                  em graus Celsius. Anomalias de temperatura acima de 35°C em áreas
-                  agrícolas indicam estresse térmico nas culturas.
-                </p>
-                <p style={{ marginTop: '0.75rem' }}>
-                  Integrado com modelos de previsão climática do INMET e CPTEC para
-                  alertas antecipados de geada e calor extremo.
-                </p>
-              </>
-            )}
-            {activeTab === 'agua' && (
-              <>
-                <h3 style={{ marginBottom: '1rem' }}>💧 Recursos Hídricos</h3>
-                <p>
-                  Utilizando o Sentinel-1 (SAR) e o índice NDWI calculado sobre o
-                  Sentinel-2, o OrbitalAg mapeia rios, reservatórios, açudes e lençóis
-                  freáticos superficiais.
-                </p>
-                <p style={{ marginTop: '0.75rem' }}>
-                  Ideal para monitorar níveis de represas, planejar irrigação e identificar
-                  riscos de enchentes em baixadas ao longo de rios.
-                </p>
-              </>
-            )}
-            {activeTab === 'fogo' && (
-              <>
-                <h3 style={{ marginBottom: '1rem' }}>🔥 Detecção de Queimadas</h3>
-                <p>
-                  O sensor MODIS / VIIRS identifica focos de calor ativo na superfície
-                  com atualização diária. O OrbitalAg cruza esses dados com as coordenadas
-                  das propriedades cadastradas e emite alertas automáticos.
-                </p>
-                <p style={{ marginTop: '0.75rem' }}>
-                  Integrado ao sistema do INPE e ao Space Charter para resposta
-                  emergencial coordenada com defesa civil.
-                </p>
-              </>
-            )}
+            <h3 style={{ marginBottom: '1rem' }}>{tabContent[activeTab].title}</h3>
+            {tabContent[activeTab].text.map((p, i) => (
+              <p key={i} style={{ marginTop: i > 0 ? '0.75rem' : 0 }}>{p}</p>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ===== Features da plataforma ===== */}
+      {/* ===== Features ===== */}
       <section
         className="section"
         style={{ background: 'var(--color-bg-secondary)', borderTop: '1px solid var(--color-border)' }}
@@ -310,7 +280,7 @@ export default function Plataforma() {
         <div className="container">
           <div className="section-header">
             <div className="section-tag">Funcionalidades</div>
-            <h2>Muito mais do que um mapa</h2>
+            <h2>Muito mais do que previsão do tempo</h2>
           </div>
 
           <div className="grid-4">

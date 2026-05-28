@@ -1,17 +1,29 @@
-# 🛰️ OrbitalAg — Monitoramento Agrícola via Satélite
+# 🛡️ SkyShield — Sistema de Previsão de Desastres Climáticos
 
 > **FIAP Global Solution 2026/1 — Front-End Design Engineering**  
 > Tema: *O Espaço é a Nova Fronteira*
 
 ---
 
-## 📋 Descrição
+## 📋 O que é?
 
-O **OrbitalAg** é uma plataforma digital que transforma dados abertos de satélites (Sentinel-2, Landsat 9, MODIS) em inteligência prática para agricultores, cooperativas e órgãos de defesa civil. A solução conecta a nova **economia espacial** com os maiores desafios do agronegócio e do meio ambiente no Brasil.
+O **SkyShield** é uma plataforma que usa dados de satélites meteorológicos para prever desastres climáticos (chuvas extremas, secas, enchentes) com **5 a 7 dias de antecedência** e envia alertas automáticos para as pessoas via **Telegram**.
 
-**Problema resolvido:** Agricultores perdem bilhões anuais com eventos previsíveis (secas, pragas, queimadas) por falta de acesso a dados satelitais em tempo real.
+### Por que é importante?
 
-**Solução:** Dashboard interativo com NDVI, alertas climáticos, detecção de queimadas e gestão hídrica — tudo baseado em dados orbitais acessíveis e gratuitos.
+Comunidades rurais e agricultores sofrem constantemente com desastres climáticos sem aviso prévio. Com o SkyShield, eles teriam tempo para:
+
+- 🚪 Evacuar se necessário
+- 🌾 Proteger plantações e bens
+- 🏠 Preparar suas casas
+- 🚨 Ativar planos de emergência
+
+### Exemplo real
+
+> João é agricultor em Minas Gerais. Recebe alerta do SkyShield:  
+> *"🛡️ Chuva extrema prevista em 5 dias".*  
+> Ele colhe a plantação antes da chuva e protege seus bens.  
+> **Resultado: salva sua safra e sua renda.**
 
 ---
 
@@ -25,7 +37,7 @@ O **OrbitalAg** é uma plataforma digital que transforma dados abertos de satél
 
 ```bash
 # Clone o repositório
-git clone https://github.com/orbital-ag/orbital-ag.git
+git clone https://github.com/enzoleiva2008-blip/orbital-ag.git
 cd orbital-ag
 
 # Instale as dependências
@@ -46,6 +58,16 @@ npm run preview
 
 ---
 
+## ⚙️ Como funciona?
+
+1. **Satélites** coletam dados de clima (temperatura, umidade, pressão)
+2. **Banco de dados** armazena esses dados em tempo real e histórico
+3. **Inteligência Artificial** analisa e prevê desastres com 5–7 dias de antecedência
+4. **Chatbot no Telegram** envia alertas automáticos por região
+5. **Site** mostra mapa interativo com previsões e níveis de risco
+
+---
+
 ## 🗂️ Estrutura de Pastas
 
 ```
@@ -53,7 +75,6 @@ orbital-ag/
 ├── public/
 │   └── assets/           # Imagens e ícones públicos
 ├── src/
-│   ├── assets/           # Assets importados via JS
 │   ├── components/       # Componentes reutilizáveis
 │   │   ├── Navbar.jsx    # Navegação com menu hambúrguer
 │   │   ├── Footer.jsx    # Rodapé completo
@@ -67,8 +88,8 @@ orbital-ag/
 │   │   ├── FAQ.jsx       # Perguntas frequentes
 │   │   ├── Contato.jsx   # Formulário de contato
 │   │   ├── Integrantes.jsx    # Equipe
-│   │   ├── Solucao.jsx   # Solução (página 1 extra)
-│   │   └── Plataforma.jsx     # Dashboard (página 2 extra)
+│   │   ├── Solucao.jsx   # Solução (página extra 1)
+│   │   └── Plataforma.jsx     # Dashboard (página extra 2)
 │   ├── styles/           # Arquivos CSS externos
 │   │   ├── global.css    # Reset, variáveis e estilos base
 │   │   ├── navbar.css    # Estilos da navbar
@@ -92,9 +113,9 @@ orbital-ag/
 | React 19 + Vite 8 | Framework e build tool |
 | CSS Puro (variáveis CSS) | Estilização sem frameworks externos |
 | React Router v6 | Navegação SPA entre páginas |
-| Sentinel-2 (ESA) | Fonte de dados satelitais (referência) |
-| Landsat 9 (NASA) | Séries históricas de cobertura (referência) |
-| MODIS / VIIRS | Dados de temperatura e queimadas (referência) |
+| GOES-16 / NOAA-20 (NASA/NOAA) | Satélites meteorológicos (referência) |
+| Sentinel-3 (ESA) | Dados oceanográficos e climáticos (referência) |
+| Telegram Bot API | Canal de distribuição dos alertas |
 
 **Proibições atendidas:** Nenhum uso de Bootstrap, jQuery, Material UI, Axios ou outros frameworks externos. CSS 100% customizado.
 
@@ -105,39 +126,38 @@ orbital-ag/
 ### Obrigatórias
 | Rota | Página | Descrição |
 |---|---|---|
-| `/` | Home | Hero animado, features, como funciona, impacto e CTA |
-| `/sobre` | Sobre | Contexto do projeto, tecnologias e ODS da ONU |
+| `/` | Home | Hero, funcionalidades, como funciona, impacto e CTA |
+| `/sobre` | Sobre | Contexto, tecnologias, exemplo real e ODS da ONU |
 | `/faq` | FAQ | 4 categorias de perguntas com acordeon interativo |
-| `/contato` | Contato | Formulário com validação completa e feedback visual |
-| `/integrantes` | Equipe | Cards com nome, RM, turma, foto, GitHub e LinkedIn |
+| `/contato` | Contato | Formulário com validação completa e feedback |
+| `/integrantes` | Equipe | Cards com nome, RM, turma, GitHub e LinkedIn |
 
 ### Da Solução (mínimo 2 extras)
 | Rota | Página | Descrição |
 |---|---|---|
-| `/solucao` | Solução | Problema vs solução, 6 módulos, arquitetura em camadas |
-| `/plataforma` | Plataforma | Dashboard simulado, alertas, tabs de camadas de dados |
+| `/solucao` | Solução | Problema vs solução, caso real, 6 módulos, arquitetura |
+| `/plataforma` | Plataforma | Dashboard simulado, alertas ativos, tabs por módulo |
 
 ---
 
 ## ✅ Funcionalidades JavaScript
 
-- **Menu hambúrguer** — abre/fecha com animação, bloqueia scroll do body, aria-expanded
-- **Validação de formulário** — `preventDefault()`, mensagens por campo, feedback visual, foco no 1º erro
+- **Menu hambúrguer** — abre/fecha com animação, bloqueia scroll, aria-expanded
+- **Validação de formulário** — `preventDefault()`, mensagens por campo, foco no 1º erro
 - **Tabs interativas** — alternância de conteúdo na página Plataforma com aria-selected
 - **Sidebar clicável** — menu do dashboard com estado ativo
-- **Acordeon FAQ** — abertura/fechamento com animação CSS, aria-expanded
-- **Navbar scrolled** — muda estilo (glassmorphism) ao rolar a página
+- **Acordeon FAQ** — abertura/fechamento com animação CSS e aria-expanded
+- **Navbar scrolled** — glassmorphism ao rolar a página
 - **Scroll to top** — botão no footer
 
 ---
 
-## 📱 Responsividade
+## 👥 Quem é ajudado?
 
-| Breakpoint | Layout |
-|---|---|
-| Desktop >= 992px | Grid 2-4 colunas, layout completo |
-| Tablet >= 768px | Grid 2 colunas, menu colapsado |
-| Mobile <= 480px | 1 coluna, menu hambúrguer |
+- 🌾 **Agricultores** — protegem plantações e evitam perdas de safra
+- 🏘️ **Comunidades rurais** — têm tempo para evacuar com segurança
+- 🚨 **Prefeituras e Defesa Civil** — ativam planos de emergência com antecedência
+- 🏙️ **Populações urbanas** — recebem avisos e se preparam
 
 ---
 
@@ -169,10 +189,10 @@ orbital-ag/
 
 ## 📞 Contato
 
-- **E-mail:** orbital.ag@fiap.com.br
+- **E-mail:** skyshield@fiap.com.br
+- **Telegram:** @SkyShieldBot
 - **GitHub:** [github.com/enzoleiva2008-blip/orbital-ag](https://github.com/enzoleiva2008-blip/orbital-ag)
-- **LinkedIn:** [linkedin.com/in/enzoleiva2008-blip](https://linkedin.com/in/enzoleiva2008-blip)
-- **Instituição:** FIAP — Análise e Desenvolvimento de Sistemas, Turma 1TDSA
+- **Instituição:** FIAP — Análise e Desenvolvimento de Sistemas, Turma 1TDSPX
 
 ---
 

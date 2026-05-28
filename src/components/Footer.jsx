@@ -13,21 +13,22 @@ export default function Footer() {
           {/* Marca */}
           <div className="footer-brand">
             <div className="footer-logo">
-              <span>🛰️</span> Orbital<span>Ag</span>
+              <span>🛡️</span> Sky<span>Shield</span>
             </div>
             <p>
-              Conectando a economia espacial ao agronegócio brasileiro.
-              Dados de satélite em tempo real para um campo mais inteligente e sustentável.
+              Previsão de desastres climáticos com 5 a 7 dias de antecedência.
+              Satélites meteorológicos + IA + alertas automáticos no Telegram
+              para proteger vidas e plantações.
             </p>
             <div className="footer-social" aria-label="Redes sociais">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="GitHub">
+              <a href="https://github.com/enzoleiva2008-blip/orbital-ag" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="GitHub">
                 🐙
               </a>
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="LinkedIn">
                 💼
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Instagram">
-                📸
+              <a href="https://telegram.org" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Telegram">
+                ✈️
               </a>
             </div>
           </div>
@@ -60,13 +61,14 @@ export default function Footer() {
               <li><a href="https://nasa.gov" target="_blank" rel="noopener noreferrer">NASA Open Data</a></li>
               <li><a href="https://esa.int" target="_blank" rel="noopener noreferrer">ESA – Sentinel</a></li>
               <li><a href="https://disasterscharter.org" target="_blank" rel="noopener noreferrer">Space Charter</a></li>
+              <li><a href="https://inmet.gov.br" target="_blank" rel="noopener noreferrer">INMET</a></li>
             </ul>
           </div>
         </div>
 
         {/* Barra inferior */}
         <div className="footer-bottom">
-          <p>&copy; {year} OrbitalAg — Desenvolvido para FIAP Global Solution 2026/1</p>
+          <p>&copy; {year} SkyShield — Desenvolvido para FIAP Global Solution 2026/1</p>
           <div className="footer-bottom-links">
             <button
               onClick={scrollToTop}

@@ -12,31 +12,29 @@ export default function Navbar() {
     return cleanup;
   }, []);
 
-  /* Fecha menu ao navegar */
   const closeMenu = () => setMenuOpen(false);
 
-  /* Bloqueia scroll quando menu mobile está aberto */
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : '';
     return () => { document.body.style.overflow = ''; };
   }, [menuOpen]);
 
   const navItems = [
-    { to: '/',           label: 'Início'      },
-    { to: '/sobre',      label: 'Sobre'       },
-    { to: '/solucao',    label: 'Solução'     },
-    { to: '/plataforma', label: 'Plataforma'  },
-    { to: '/faq',        label: 'FAQ'         },
-    { to: '/contato',    label: 'Contato'     },
-    { to: '/integrantes',label: 'Equipe'      },
+    { to: '/',            label: 'Início'      },
+    { to: '/sobre',       label: 'Sobre'       },
+    { to: '/solucao',     label: 'Solução'     },
+    { to: '/plataforma',  label: 'Plataforma'  },
+    { to: '/faq',         label: 'FAQ'         },
+    { to: '/contato',     label: 'Contato'     },
+    { to: '/integrantes', label: 'Equipe'      },
   ];
 
   return (
     <nav className={`navbar${scrolled ? ' scrolled' : ''}`} role="navigation" aria-label="Menu principal">
       <div className="container">
-        <Link to="/" className="navbar-logo" onClick={closeMenu} aria-label="OrbitalAg - Início">
-          <span className="logo-icon">🛰️</span>
-          Orbital<span>Ag</span>
+        <Link to="/" className="navbar-logo" onClick={closeMenu} aria-label="SkyShield - Início">
+          <span className="logo-icon">🛡️</span>
+          Sky<span>Shield</span>
         </Link>
 
         <ul className={`nav-links${menuOpen ? ' open' : ''}`} role="list">
